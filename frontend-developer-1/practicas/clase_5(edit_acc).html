@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD982;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .login {
+            display:grid;
+            height: 100vh;
+            width: 100%;
+            place-items: center;
+        }
+        .form-container{
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo {
+            justify-self: center;
+            margin-bottom: 48px;
+            width: 150px;
+            display: none;
+        }
+
+        .title {
+            font-size: var(--lg);
+            text-align: left;
+            margin-bottom: 36px;
+        }
+
+        .label {
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        
+        .value {
+            color: var(--very-light-pink);
+            font-size: var(--md);
+            padding: 8px 0 32px 0;
+            margin: 0;           
+        }
+
+        .login-btn {
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+
+        .secondary-btn {
+            height: 50px;
+            background-color: var(--white);
+            border-radius: 8px;
+            border: 1px solid var(--hospital-green);
+            color: var(--hospital-green);
+            font-size: var(--md);
+            font-weight: bold;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        @media (max-width: 640px) {
+            .form-container {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                justify-content: space-between;
+            }
+            .form {
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="form-container">
+            <img src="../logos/logo_yard_sale.svg" alt="logo" class="logo">
+            <div>
+                <h1 class="title">My account</h1>
+            </div>
+
+            <form action="" class="form">
+                <div class="form">
+                    <label for="name" class="label name">Name</label>
+                    <p class="value">Camila Yokoo</p>
+
+                    <label for="email" class="label">Email</label>
+                    <p class="value">platzi@example.com</p>
+
+                    <label for="password" class="label">Password</label>
+                    <p class="value">************</p>
+                </div>
+                
+                <button type="submit" value="Edit" class="login-btn secondary-btn">Edit</button>
+            </form>
+        </div>
+    </div>
+    
+    
+
+</body>
+</html>
