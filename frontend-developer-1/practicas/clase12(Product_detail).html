@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+                --white: #FFFFFF;
+                --black: #000000;
+                --very-light-pink: #C7C7C7;
+                --text-input-field: #F7F7F7;
+                --hospital-green: #ACD982;
+                --sm: 14px;
+                --md: 16px;
+                --lg: 18px;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Quicksand', sans-serif;
+                margin: 0;
+            }
+
+            .product-detail {
+                /* No es necesario */
+                /* display: flex; */
+                /* flex-direction: column; */
+                /* justify-content: center; */
+                width: 360px;
+                padding-bottom: 24px;
+                position: relative;
+            }
+
+            .product-detail-close {
+                position: absolute;
+                left: 12px;
+                top: 12px;
+                z-index: 2;
+                width: 36px;
+                height: 36px;
+                background-color: var(--white);
+                border-radius: 50%;
+                padding: 12px;
+                overflow: hidden;
+            }
+
+            .product-detail-close img {
+                /*centrar la imagen fue un problema por el box-sizing: border box*/
+                display: block;
+                margin: 0 auto;
+                width: 12px;
+                height: 12px;
+            }
+
+            .product-detail-close:hover {
+                cursor: pointer;
+            }
+
+            .product-detail figure {
+                margin: 0;
+                padding: 0;
+            }
+
+            .product-info {
+                display: flex;
+                flex-direction: column;
+                margin: 0 24px;
+            }
+
+            .product-info p {
+                font-size: var(--md);
+            }
+
+            .product-img {
+                width: 100%;
+                object-fit: cover;
+                border-radius: 20px;
+            }
+
+            .dots {
+                text-align: center;
+            }
+
+            .dot {
+                cursor: pointer;
+                height: 8px;
+                width: 8px;
+                margin: 0 2px;
+                background-color: var(--very-light-pink);
+                border-radius: 50%;
+                display: inline-block;
+            }
+
+            .dots span:nth-child(1) {
+                background-color: var(--hospital-green);
+            }
+
+            .product-price {
+                font-weight: bold;
+                font-size: var(--md);
+                margin-bottom: 4px;
+            }
+
+            .product-name {
+                font-size: var(--md);
+            }
+
+            .product-description {
+                font-size: var(--sm);
+            }
+
+
+            .product-name, .product-description {
+                color: var(--very-light-pink);
+                margin-top: 0;
+                margin-bottom: 36px;
+            }
+
+            .primary-btn {
+                width: 100%;
+                height: 50px;
+                color: var(--white);
+                font-weight: bold;
+                font-size: var(--md);
+                background-color: var(--hospital-green);
+                border-radius: 8px;
+                border: none;
+                cursor: pointer;
+            }
+            .add-product-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .shopping-cart-icon {
+                margin-right: 10px;
+            }
+
+            /* It works, but it's more complicated.
+            .btn-container {
+                position: relative;
+            }
+
+            shopping-cart-icon {
+                width: 20px;
+                position: absolute;
+                left: 165px;
+                top: 15px;
+            } */
+
+            @media (max-width: 640px) {
+                .product-detail {
+                    width: 100%;
+                }
+            }
+    </style>
+</head>
+<body>
+    <aside class="product-detail">
+        <div class="product-detail-close">
+            <img src="../icons/icon_close.png" alt="close">
+        </div>
+        <figure class="img-container">
+            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="bike" class="product-img">
+        </figure>
+        <div class="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <div class="product-info">
+            <p class="product-price">$ 90,00</p>
+            <p class="product-name">Bike</p>
+            <p class="product-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae nesciunt odit est earum, aliquid omnis, delectus a nulla sint ex accusantium facere repellendus. Deserunt error accusantium inventore dolore amet ipsum.
+            Sequi tenetur deleniti doloribus fuga nam, optio ipsum qui odit inventore est saepe atque porro impedit voluptate officiis, a facilis eaque. Ut at quis officiis doloremque doloribus quas sapiente recusandae.</p>
+        <!-- <div class="btn-container"> -->
+            <button class="primary-btn add-product-btn">
+                <img src="../icons/icon_shopping_cart.svg" alt="shopping-cart-icon" class="shopping-cart-icon">
+                Add to cart
+            </button> 
+        <!-- </div> -->
+        </div>
+    </aside>
+    
+</body>
+</html>
